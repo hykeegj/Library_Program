@@ -6,6 +6,7 @@ from PyQt5 import uic
 
 form_class = uic.loadUiType("MainUI.ui")[0]
 
+
 class MyWindow(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
@@ -24,12 +25,18 @@ class MyWindow(QMainWindow, form_class):
             i = 0
             while i < 3:
                 if self.tableWidget.item(row_1, 1).text() == self.tableWidget_2.item(i, 5).text():
-                    self.lineEdit_6.setText(self.tableWidget_2.item(i, 0).text())
-                    self.lineEdit_7.setText(self.tableWidget_2.item(i, 1).text())
-                    self.lineEdit_8.setText(self.tableWidget_2.item(i, 2).text())
-                    self.lineEdit_9.setText(self.tableWidget_2.item(i, 3).text())
-                    self.lineEdit_10.setText(self.tableWidget_2.item(i, 4).text())
-                    self.lineEdit_12.setText(self.tableWidget_2.item(i, 5).text())
+                    self.lineEdit_6.setText(
+                        self.tableWidget_2.item(i, 0).text())
+                    self.lineEdit_7.setText(
+                        self.tableWidget_2.item(i, 1).text())
+                    self.lineEdit_8.setText(
+                        self.tableWidget_2.item(i, 2).text())
+                    self.lineEdit_9.setText(
+                        self.tableWidget_2.item(i, 3).text())
+                    self.lineEdit_10.setText(
+                        self.tableWidget_2.item(i, 4).text())
+                    self.lineEdit_12.setText(
+                        self.tableWidget_2.item(i, 5).text())
 
                     break
                 i += 1
@@ -114,6 +121,7 @@ class MyWindow(QMainWindow, form_class):
                     self.lineEdit_12.setText('없음')
                     break
                 i += 1
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
